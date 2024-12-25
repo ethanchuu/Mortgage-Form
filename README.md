@@ -34,6 +34,11 @@ A full-stack application that allows users to search for and manage mortgages, i
 
 ---
 
+<img width="1512" alt="Screenshot 2024-12-25 at 12 19 04 AM" src="https://github.com/user-attachments/assets/ebbae328-e4e1-4e01-aafa-3b6a37ecac54" />
+
+---
+
+
 ## Tech Stack
 
 ### Backend:
@@ -66,7 +71,7 @@ Mortgage-Form/
 
 ---
 
-## Initialization
+## How to Run
 
 ### Backend (Spring Boot):
 1. Navigate to the backend folder:
@@ -99,54 +104,36 @@ Mortgage-Form/
    ```
    http://localhost:3000
    ```
----
-
-## Endpoints
-
-### Backend Endpoints:
-1. **Filter Mortgages**:  
-   Endpoint:  
-   ```
-   POST /api/mortgages
-   ```
-   Request Body Example:
-   ```json
-   {
-     "filters": [
-       "MSAMD = '12345'",
-       "Income-to-Debt Ratio > 0.5"
-     ]
-   }
-   ```
-   Response:
-   ```json
-   {
-     "mortgages": [
-       { "name": "Mortgage 1", "amount": "100000" },
-       { "name": "Mortgage 2", "amount": "200000" }
-     ],
-     "loanAmountSum": 300000
-   }
-   ```
-
-2. **Get Filtered Mortgages**:
-   Endpoint:  
-   ```
-   GET /api/mortgages
-   ```
 
 ---
 
-### Frontend UI
+## Features Implemented
 
-<img width="1512" alt="Screenshot 2024-12-25 at 12 19 04 AM" src="https://github.com/user-attachments/assets/02155696-3dd5-45ff-8f87-9a9c79382454" /> 
+- Filters for Mortgage Search:
+  - MSAMD (Metropolitan Statistical Area/Metropolitan Division).
+  - Income-to-Debt Ratio (minimum and/or maximum).
+  - County.
+  - Loan Type.
+  - Tract-to-MSAMD-Income (minimum and/or maximum).
+  - Loan Purpose.
+  - Property Type.
+
+- Display Results:
+  - Display a list of mortgages matching the filters.
+  - Show the total number of results and the sum of loan amounts.
+
+- Filter Management:
+  - Add filters.
+  - Delete individual filters or reset all filters.
+
+- Rate Calculation:
+  - Allow calculation of the expected rate using a weighted average based on the loan amount.
 
 ---
 
-## Future Enhancements
-- Add user authentication and role-based access.
-- Enhance filtering options with more dynamic queries.
-- Deploy the application on a cloud platform like AWS or Heroku.
+## Author
+
+**Ethan Chu**  
 
 ---
 
